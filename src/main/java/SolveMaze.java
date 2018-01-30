@@ -9,6 +9,13 @@ import edu.illinois.cs.cs125.lib.mazemaker.Maze;
  */
 @SuppressWarnings("checkstyle:emptyblock")
 public class SolveMaze {
+    while(Maze.isFinished() == false){
+        Maze.turnRight();
+        while (Maze.canMove() == false) {
+            Maze.turnLeft();
+        }
+        Maze.move();
+    }
 
     /**
      * Implement your maze solving algorithm in the main method below.
